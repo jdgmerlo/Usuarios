@@ -30,6 +30,7 @@ public class RegistroActivity extends AppCompatActivity {
     public void onclick(View view) {
 
         registrarUsuario();
+        //registroUsuarioSQL();
 
     }
 
