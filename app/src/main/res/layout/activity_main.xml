@@ -4,14 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
     <Button
+        android:id="@+id/btnG"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Guardar"
         android:layout_marginTop="30dp"
+        android:onClick="onclick"/>
+
+    <Button
+        android:id="@+id/btnB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
         android:onClick="onclick"/>
 
 </LinearLayout>

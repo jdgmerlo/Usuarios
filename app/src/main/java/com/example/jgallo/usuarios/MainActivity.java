@@ -19,7 +19,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void onclick(View view) {
 
-        Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
+        Intent intent = null;
+
+        switch (view.getId()){
+
+            case R.id.btnG:
+                intent = new Intent(MainActivity.this, RegistroActivity.class);
+                break;
+            case R.id.btnB:
+                intent = new Intent(MainActivity.this,ConsultaActivity.class);
+                break;
+
+        }
+
         startActivity(intent);
 
     }

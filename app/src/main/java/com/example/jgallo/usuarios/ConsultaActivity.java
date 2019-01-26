@@ -42,8 +42,6 @@ public class ConsultaActivity extends AppCompatActivity {
                 break;
         }
 
-
-
     }
 
     private void consultar() {
