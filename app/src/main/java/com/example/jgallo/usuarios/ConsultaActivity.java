@@ -38,9 +38,31 @@ public class ConsultaActivity extends AppCompatActivity {
         switch (view.getId())
         {
             case R.id.btnBuscar:
-                consultar();
+                //consultar();
+                consultarSQL();
                 break;
         }
+
+    }
+
+    private void consultarSQL() {
+
+        SQLiteDatabase db = conn.getReadableDatabase();
+        String[] parametros = {et1.getText().toString()};
+
+
+        try {
+            Cursor cursor = db.rawQuery("SELECT "+Utilidades.C_NOMBRE+","+Utilidades.C_TELEFONO+" FROM " + Utilidades.T_USUARIOS + " WHERE "+ Utilidades.C_ID+ " =? ",parametros);
+
+            cursor.moveToFirst();
+            et2.setText(cursor.getString(0));
+            et3.setText(cursor.getString(1));
+
+        }catch (Exception ex){
+            Toast.makeText(getApplicationContext(),"No existe",Toast.LENGTH_LONG).show();
+            limpiar();
+        }
+
 
     }
 
