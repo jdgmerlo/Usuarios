@@ -5,19 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ConsultaActivity">
 
 
-    <Button
-        android:id="@+id/btnG"
+    <EditText
+        android:id="@+id/documento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:layout_marginTop="30dp"
-        android:onClick="onclick"/>
+        android:hint="documento"/>
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nombre"/>
+
+    <EditText
+        android:id="@+id/telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="telefono"
+        android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/btnB"
+        android:id="@+id/btnBuscar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Buscar"
