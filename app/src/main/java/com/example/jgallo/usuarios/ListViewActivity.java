@@ -1,5 +1,6 @@
 package com.example.jgallo.usuarios;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -46,6 +47,17 @@ public class ListViewActivity extends AppCompatActivity {
                 informacion +="Teléfono: " + listaUsuarios.get(position).getTelefono()+"\n";
 
                 Toast.makeText(getApplicationContext(),informacion,Toast.LENGTH_LONG).show();
+
+                Usuario user = listaUsuarios.get(position);
+
+                Intent intent = new Intent(ListViewActivity.this,DetalleUsuarioActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("usuario",user);
+
+                intent.putExtras(bundle);
+                startActivity(intent);
+
+
             }
         });
 
