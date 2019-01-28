@@ -19,7 +19,8 @@
         <activity android:name=".RegistroActivity" />
         <activity android:name=".ConsultaActivity" />
         <activity android:name=".SpinnerActivity" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".DetalleUsuarioActivity"></activity>
     </application>
 
 </manifest>
