@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnSpinner:
                 intent = new Intent(MainActivity.this,SpinnerActivity.class);
                 break;
+            case R.id.btnList:
+                intent = new Intent(MainActivity.this,ListViewActivity.class);
+                break;
 
         }
 
