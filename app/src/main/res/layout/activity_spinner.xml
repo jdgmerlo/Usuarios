@@ -5,39 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistroActivity">
+    tools:context=".SpinnerActivity">
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registro de Usuario"
+        android:text="Búsqueda por Spinner"
         android:textSize="30dp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"/>
+        android:textAlignment="center"/>
 
-    <EditText
-        android:id="@+id/id_usuario"
+    <Spinner
+        android:id="@+id/spUsuarios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ID"/>
+        android:layout_marginTop="20dp">
 
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="NOMBRE"/>
-    <EditText
-        android:id="@+id/telefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="TELÉFONO"/>
 
-    <Button
+    </Spinner>
+
+    <TextView
+        android:id="@+id/twId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:onClick="onclick"/>
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/twNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/twTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>
