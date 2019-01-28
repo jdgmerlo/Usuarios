@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnB:
                 intent = new Intent(MainActivity.this,ConsultaActivity.class);
                 break;
+            case R.id.btnSpinner:
+                intent = new Intent(MainActivity.this,SpinnerActivity.class);
+                break;
 
         }
 
