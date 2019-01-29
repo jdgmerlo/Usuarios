@@ -1,13 +1,17 @@
 package com.example.jgallo.usuarios;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.jgallo.usuarios.entidades.Usuario;
 import com.example.jgallo.usuarios.utilidades.Utilidades;
@@ -61,6 +65,7 @@ public class RegistroMascotaActivity extends AppCompatActivity {
             personasList.add(persona);
         }
     obtenerLista();
+
     }
 
     private void obtenerLista() {
@@ -71,6 +76,33 @@ public class RegistroMascotaActivity extends AppCompatActivity {
         for (int i = 0; i < personasList.size(); i++){
             listaPersonas.add(personasList.get(i).getId()+" - "+personasList.get(i).getNombre());
         }
+
+    }
+
+    public void onclick(View view) {
+        guardarMascota();
+    }
+
+    private void guardarMascota() {
+        SQLiteDatabase db = conn.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(Utilidades.C_NOMBRE_MASCOTA, NomMascota.getText().toString());
+        values.put(Utilidades.C_RAZA_MASCOTA, RazaMascota.getText().toString());
+
+        int idCombo = (int) spDueniomascota.getSelectedItemId();
+
+        if(idCombo != 0){
+            int idDuenio = personasList.get(idCombo-1).getId();
+            values.put(Utilidades.C_ID_DUENIO, idDuenio);
+
+            Long idResultante = db.insert(Utilidades.T_MASCOTA, Utilidades.C_ID_MASCOTA, values);
+
+            Toast.makeText(getApplicationContext(),"Mascota Guardada...", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(getApplicationContext(),"Ingrese un dueño...", Toast.LENGTH_LONG).show();
+        }
+
 
     }
 }
