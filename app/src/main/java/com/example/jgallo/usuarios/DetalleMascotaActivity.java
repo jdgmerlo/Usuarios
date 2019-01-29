@@ -12,7 +12,8 @@ import com.example.jgallo.usuarios.utilidades.Utilidades;
 
 public class DetalleMascotaActivity extends AppCompatActivity {
 
-    TextView nombreUsuario, telefonoUsuario, nombreMascota, razaMascota, idMascota, idUsuario;
+    TextView idUsuario, nombreUsuario, telefonoUsuario;
+    TextView idMascota, nombreMascota, razaMascota;
     ConexionSQLiteHelper conn;
 
 
@@ -20,6 +21,8 @@ public class DetalleMascotaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_mascota);
+
+        conn = new ConexionSQLiteHelper(getApplicationContext(),"BDusuarios",null,1);
 
         idUsuario = (TextView) findViewById(R.id.tvUid);
         nombreUsuario = (TextView) findViewById(R.id.tvUnombre);
