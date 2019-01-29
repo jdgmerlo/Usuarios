@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnGMascota:
                 intent = new Intent(MainActivity.this,RegistroMascotaActivity.class);
                 break;
+            case R.id.lvMascotas:
+                intent = new Intent(MainActivity.this, ListaMascotasActivity.class);
+                break;
 
         }
 
