@@ -97,8 +97,8 @@ public class RegistroMascotaActivity extends AppCompatActivity {
             values.put(Utilidades.C_ID_DUENIO, idDuenio);
 
             Long idResultante = db.insert(Utilidades.T_MASCOTA, Utilidades.C_ID_MASCOTA, values);
-
             Toast.makeText(getApplicationContext(),"Mascota Guardada...", Toast.LENGTH_LONG).show();
+            db.close();
         }else{
             Toast.makeText(getApplicationContext(),"Ingrese un dueño...", Toast.LENGTH_LONG).show();
         }
