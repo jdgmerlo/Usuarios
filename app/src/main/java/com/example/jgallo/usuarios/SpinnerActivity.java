@@ -87,6 +87,7 @@ public class SpinnerActivity extends AppCompatActivity {
 
      obtenerLista();
 
+
     }
 
     private void obtenerLista() {

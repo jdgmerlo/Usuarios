@@ -18,6 +18,7 @@ public class RegistroMascotaActivity extends AppCompatActivity {
 
     EditText NomMascota, RazaMascota;
     Spinner spDueniomascota;
+    Button btnGM;
 
     ArrayList<String> listaPersonas;
     ArrayList<Usuario> personasList;
@@ -31,6 +32,8 @@ public class RegistroMascotaActivity extends AppCompatActivity {
 
         NomMascota = (EditText) findViewById(R.id.etNombreMascota);
         RazaMascota = (EditText) findViewById(R.id.etRaza);
+        spDueniomascota = (Spinner) findViewById(R.id.spDuenio_Mascota);
+        btnGM = (Button) findViewById(R.id.btnGuardarMascota);
 
         conn = new ConexionSQLiteHelper(getApplicationContext(),"BDusuarios",null,1);
 
