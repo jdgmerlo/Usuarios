@@ -12,15 +12,23 @@
         android:id="@+id/btnG"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar"
+        android:text="Guardar Usuario"
         android:layout_marginTop="30dp"
         android:onClick="onclick"/>
+
+    <Button
+        android:id="@+id/btnGMascota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Mascota"
+        android:onClick="onclick"/>
+
 
     <Button
         android:id="@+id/btnB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buscar"
+        android:text="Buscar Usuario"
         android:onClick="onclick"/>
 
     <Button
@@ -35,6 +43,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ListView"
+        android:onClick="onclick"/>
+
+    <Button
+        android:id="@+id/lvMascotas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de Mascotas"
         android:onClick="onclick"/>
 
 </LinearLayout>

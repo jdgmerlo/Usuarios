@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnList:
                 intent = new Intent(MainActivity.this,ListViewActivity.class);
                 break;
+            case R.id.btnGMascota:
+                intent = new Intent(MainActivity.this,RegistroMascotaActivity.class);
+                break;
 
         }
 
