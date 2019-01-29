@@ -24,10 +24,12 @@ public class DetalleMascotaActivity extends AppCompatActivity {
 
         conn = new ConexionSQLiteHelper(getApplicationContext(),"BDusuarios",null,1);
 
+        //USUARIO
         idUsuario = (TextView) findViewById(R.id.tvUid);
         nombreUsuario = (TextView) findViewById(R.id.tvUnombre);
         telefonoUsuario = (TextView) findViewById(R.id.tvUtelefono);
 
+        //MASCOTA
         idMascota = (TextView) findViewById(R.id.tvMid);
         nombreMascota = (TextView) findViewById(R.id.tvMnombre);
         razaMascota = (TextView) findViewById(R.id.tvMraza);
@@ -52,11 +54,11 @@ public class DetalleMascotaActivity extends AppCompatActivity {
         String[] campos = {Utilidades.C_NOMBRE, Utilidades.C_TELEFONO};
 
         try {
-            Cursor cursor = db.query(Utilidades.T_USUARIOS,campos,Utilidades.C_ID+"=? ",parametros,null,null,null,null);
+            Cursor cursor = db.query(Utilidades.T_USUARIOS,campos,Utilidades.C_ID+"=? ",parametros,null,null,null);
             cursor.moveToFirst();
             idUsuario.setText(idPersona.toString());
-            nombreUsuario.setText(cursor.getString(1));
-            telefonoUsuario.setText(cursor.getString(2));
+            nombreUsuario.setText(cursor.getString(0));
+            telefonoUsuario.setText(cursor.getString(1));
             cursor.close();
         }catch (Exception e){
             nombreUsuario.setText("");
