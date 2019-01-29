@@ -22,7 +22,8 @@
         <activity android:name=".ListViewActivity" />
         <activity android:name=".DetalleUsuarioActivity" />
         <activity android:name=".RegistroMascotaActivity" />
-        <activity android:name=".ListaMascotasActivity"></activity>
+        <activity android:name=".ListaMascotasActivity" />
+        <activity android:name=".DetalleMascotaActivity"></activity>
     </application>
 
 </manifest>

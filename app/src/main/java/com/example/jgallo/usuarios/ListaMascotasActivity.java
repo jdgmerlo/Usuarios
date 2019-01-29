@@ -1,10 +1,13 @@
 package com.example.jgallo.usuarios;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.strictmode.SqliteObjectLeakedViolation;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -33,6 +36,20 @@ public class ListaMascotasActivity extends AppCompatActivity {
 
         ArrayAdapter adaptador = new ArrayAdapter(this, android.R.layout.simple_list_item_1,listaInformacion);
         lvM.setAdapter(adaptador);
+
+        lvM.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Mascota mascota = listaMascota.get(position);
+
+                Intent intent = new Intent(ListaMascotasActivity.this, DetalleMascotaActivity.class);
+                Bundle bundle = new Bundle();
+
+                bundle.putSerializable("mascota",mascota);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
     }
 
