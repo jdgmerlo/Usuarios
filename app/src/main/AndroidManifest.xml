@@ -21,7 +21,8 @@
         <activity android:name=".SpinnerActivity" />
         <activity android:name=".ListViewActivity" />
         <activity android:name=".DetalleUsuarioActivity" />
-        <activity android:name=".RegistroMascotaActivity"></activity>
+        <activity android:name=".RegistroMascotaActivity" />
+        <activity android:name=".ListaMascotasActivity"></activity>
     </application>
 
 </manifest>
